@@ -7,7 +7,7 @@ test("fetches weather data", async () => {
     wrapper: WeatherProvider,
   });
 
-  // Use 'await act()' to wait for fetchWeather to complete
+  // Using 'await act()' to wait for fetchWeather to complete
   await act(async () => {
     await result.current.fetchWeather("London");
   });

@@ -13,3 +13,9 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+html, body {
+    width: 100%;
+    max-width: none;
+    overflow-x: hidden;
+    color: "#121717";
+  }

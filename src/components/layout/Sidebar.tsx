@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useWeather } from "../hooks/useWeather";
 import Modal from "../ui/Modal";
 import Button from "../ui/Button";
@@ -29,15 +29,52 @@ const Sidebar: React.FC = () => {
     "/assets/images/city5.webp",
   ];
 
+  useEffect(() => {
+    localStorage.setItem("favorities", JSON.stringify(favorites));
+  }, [favorites]);
+
   // Add new favorite city
   const addFavoriteCity = () => {
     if (cityInput.trim() === "") return;
+    if (
+      favorites.some(
+        (city) => city.name.toLowerCase() === cityInput.toLowerCase()
+      )
+    ) {
+      return;
+    }
+
     const randomImage =
       cityImages[Math.floor(Math.random() * cityImages.length)];
-    setFavorites([...favorites, { name: cityInput, image: randomImage }]);
+
+    const newFavourites = [
+      ...favorites,
+      { name: cityInput, image: randomImage },
+    ];
+
+    setFavorites(newFavourites);
+
     setCityInput("");
     setShowModal(false);
   };
+
+  useEffect(() => {
+    const favorite = localStorage.getItem("favorites");
+    if (favorite) {
+      setFavorites(JSON.parse(favorite));
+    } else {
+      setFavorites([
+        {
+          name: "New York",
+          image: "/assets/images/city3.webp",
+        },
+        {
+          name: "San Francisco",
+          image: "/assets/images/city1.webp",
+        },
+      ]);
+    }
+  }, []);
 
   return (
     <aside className="w-full md:w-[288px] p-6">

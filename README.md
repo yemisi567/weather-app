@@ -3,14 +3,17 @@
 A modern, responsive weather application built with React, TypeScript, and Tailwind CSS. Get real-time weather information for any location with a beautiful, intuitive interface.
 
 
+<img width="1778" height="896" alt="Screenshot 2025-09-22 at 23 27 31" src="https://github.com/user-attachments/assets/624470de-af90-41d8-9085-ec036140a7fb" />
+
+
 ## Features
 
-- 🌤️ **Real-time Weather Data** - Get current weather conditions for any location
-- 🌍 **Location Search** - Search for weather by city name
-- 📊 **Detailed Metrics** - View temperature, humidity, wind speed, UV index, and more
-- 🌙 **Dark Mode Support** - Toggle between light and dark themes
-- 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
-- ⚡ **Fast & Lightweight** - Built with modern React and optimized for performance
+-  **Real-time Weather Data** - Get current weather conditions for any location
+-  **Location Search** - Search for weather by city name
+-  **Detailed Metrics** - View temperature, humidity, wind speed, UV index, and more
+-  **Dark Mode Support** - Toggle between light and dark themes
+-  **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
+-  **Fast & Lightweight** - Built with modern React and optimized for performance
 
 
 ## Tech Stack
